@@ -49,18 +49,19 @@ def get_pictire_words(path,path2):
 
     """ 带参数调用通用文字识别, 图片参数为本地图片 """
     datas = client.basicGeneral(image, options)
-
+    # print(datas["words_result"])
     for i in datas["words_result"]:
         print(i["words"])
-        document.add_paragraph(i["words"])
-    document.save(path2)
+    #     document.add_paragraph(i["words"])
+    # document.save(path2)
 
 
 if __name__ == '__main__':
     # pictureList = get_path_allPicture(r"D:\tec\HCIA-pictures")
     # pictureList = get_path_allPicture(r"D:\tec\HCIA-pictures\hcia")
-    pictureList = get_path_allPicture(r"D:\tec\HCIA-pictures\realText")
+    pictureList = get_path_allPicture(r"D:\tec\HCIA-pictures\taikePicture")
+
     for file in pictureList:
-        get_pictire_words(file,u'D:\\tec\\HCIA-pictures\\HCIA-hua.docx')
+        get_pictire_words(file,u'D:\\tec\\HCIA-pictures\\taike.docx')
 
     # renameFile(r"D:\tec\HCIA-pictures\hcia")
