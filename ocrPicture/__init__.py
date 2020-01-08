@@ -32,7 +32,7 @@ def get_path_allPicture(picturePath):
     for path in os.listdir(picturePath):
         if path.endswith(".jpg") or path.endswith(".png"):
             list.append(picturePath+'\\'+path)
-    print(list)
+    # print(list)
     return list
 
 
@@ -60,8 +60,9 @@ if __name__ == '__main__':
     # pictureList = get_path_allPicture(r"D:\tec\HCIA-pictures")
     # pictureList = get_path_allPicture(r"D:\tec\HCIA-pictures\hcia")
     pictureList = get_path_allPicture(r"D:\tec\HCIA-pictures\taikePicture")
-
-    for file in pictureList:
-        get_pictire_words(file,u'D:\\tec\\HCIA-pictures\\taike.docx')
+    # print(pictureList)
+    # for file in pictureList:
+    #     get_pictire_words(file,u'D:\\tec\\HCIA-pictures\\taike.docx')
+    get_pictire_words(pictureList[-1],u'D:\\tec\\HCIA-pictures\\taike.docx')
 
     # renameFile(r"D:\tec\HCIA-pictures\hcia")
